@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AndroidSlate</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+    <!-- Timecode Settings -->
+    <string name="pref_header_timecode">Time Code</string>
+    <string name="pref_framerate">Frame Rate</string>
+    <string name="pref_dropframe">Drop Frame</string>
+    <string-array name="pref_framerate_list">
+        <item>23.97</item>
+        <item>24</item>
+        <item>29.97</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="pref_dropframe_list">
+        <item>Drop</item>
+        <item>NonDrop</item>
+    </string-array>
+
+</resources>

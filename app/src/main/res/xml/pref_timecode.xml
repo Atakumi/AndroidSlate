@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="29.97"
+        android:entries="@array/pref_framerate_list"
+        android:entryValues="@array/pref_framerate_list"
+        android:key="timecode_framerate"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_framerate" />
+
+    <ListPreference
+        android:defaultValue="Drop"
+        android:entries="@array/pref_dropframe_list"
+        android:entryValues="@array/pref_dropframe_list"
+        android:key="timecode_dropframe"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_dropframe" />
+
+</PreferenceScreen>
