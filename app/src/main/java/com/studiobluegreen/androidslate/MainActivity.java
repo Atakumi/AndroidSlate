@@ -8,6 +8,7 @@ import java.util.TimerTask;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.Preference;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private Handler mHandler = new Handler();   // Post handler for UI thread
     private TimeCode timeCode;
     private SharedPreferences sharedPreferences;
+    private Typeface myTypeface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
         double interval = 1000.0 / this.timeCode.getFrameRate();
         this.mainTimer.schedule(mainTimerTask, 1000, (int)Math.floor(interval));
         this.countText = (TextView)findViewById(R.id.countTextView);
+
+        myTypeface = Typeface.createFromAsset(getAssets(), "fonts/ufonts.com_led-opentype.otf");
+        countText.setTypeface(myTypeface);
 
         TextView dateText = (TextView)findViewById(R.id.textDate);
         Calendar today = Calendar.getInstance();

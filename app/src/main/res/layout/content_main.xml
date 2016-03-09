@@ -12,20 +12,34 @@
     tools:context="com.studiobluegreen.androidslate.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Slate"
-        android:id="@+id/textDate"
-        android:textSize="28sp" />
+    <LinearLayout
+        android:id="@+id/HeaderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slate"
+            android:id="@+id/textDate"
+            android:textSize="28sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_below="@+id/HeaderLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="01:00:00;00"
-        android:id="@+id/countTextView"
-        android:textSize="96sp"
-        android:layout_below="@+id/textDate"
-        android:layout_alignParentStart="true" />
+        android:background="@color/colorBlack"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorLedRed"
+            android:text="01:00:00;00"
+            android:id="@+id/countTextView"
+            android:paddingLeft="20dp"
+            android:textSize="96sp"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
 
 </RelativeLayout>
